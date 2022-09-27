@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <form action="javascript:void(0);" id="frmrest" name="frmresta" class="form">
+        <h1>Realizar pedido de Don Pollo.</h1><br>
+        <div class="form-row">
+         <div class="form-group col-md-6">
+            <label for="exampleFormControlSelect1">Selecciona el combo</label>
+            <select class="form-control" id="seleccombo" >
+                <option value="" selected>Selecciona tu combo</option>
+                <option value="7.25">Super combo</option>
+              <option value="5.25">Combo personal</option>
+              <option value="3.50">Combo infantil</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+
+            <label for="cantidadP">Cantidad de combos a llevar:</label>
+            <input type="number"class="form-control" name="cantidadP" id="cantidaP">
+            </div>
+            <input type="button" id="agregarO" value="Agregar más combos">
+        </div>
+            <fieldset>
+                <legend>Agregar adicionales</legend>
+                <div class="form-row">
+         <div class="form-group col-md-6">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios1" id="ensalada" value="1.50" >
+            <label class="form-check-label" for="exampleRadios1">Ensalada $1.50</label> 
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios2" id="papas" value="1.25" >
+            <label class="form-check-label" for="exampleRadios2">Papas fritas $1.25</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios3" id="pollo-g" value="1.75" >
+            <label class="form-check-label" for="exampleRadios3">Pieza de pollo grande $1.75</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios4" id="pollo-m" value="1.50" >
+            <label class="form-check-label" for="exampleRadios3">Pieza de pollo mediana $1.50</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios5" id="pollo-p" value="1.25" >
+            <label class="form-check-label" for="exampleRadios3">Pieza de pollo pequeña $1.25</label>
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios6" id="bebida-g" value="1.50" >
+            <label class="form-check-label" for="exampleRadios3">Bebidad grande $1.50</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios7" id="bebida-m" value="1.25" >
+            <label class="form-check-label" for="exampleRadios3">Bebida mediana $1.25</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios8" id="bebida-p" value="1.00" >
+            <label class="form-check-label" for="exampleRadios3">Bebida pequeña $1.00</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios9" id="cafe" value="0.25" >
+            <label class="form-check-label" for="exampleRadios3">Cáfe $0.25</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="exampleRadios10" id="postre" value="1.25" >
+            <label class="form-check-label" for="exampleRadios3">Postre $1.25</label>
+        </div>
+        </div>
+    </div>
+    <h4>Detalle de la compra</h4>
+    <div id="detalle"></div>
+    <div id="cantidad"></div>
+    <label for="">Total a pagar:
+    <input type="text" name="total" id="tot" class="num" value="0.00" readonly="readonly">
+    </label>
+    <input type="submit" id="ordenar" class="btn btn-primary btn-md" value="Realizar compra." >
+
+</fieldset>
+
+    </form>
+    <h3>Sugerencias y comentarios</h3>
+    <button onclick="comentario()">Comentario.</button>
+    <div id="comentario"></div>
+<script src="js/Pedido.js"></script>
+</body>
+</html>
